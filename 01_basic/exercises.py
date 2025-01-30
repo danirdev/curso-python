@@ -8,6 +8,9 @@ print("Escribe un programa que imprima tu nombre y tu ciudad en líneas separada
 
 ### Completa aquí
 
+print("Hola, soy Daniel Ramos")
+print("Soy de Jujuy, Argentina")
+
 print("--------------")
 
 print("\nEjercicio 2: Muestra los tipos de datos de las siguientes variables:")
@@ -19,6 +22,8 @@ d = True
 e = None
 
 ### Completa aquí
+
+
 
 print("--------------")
 
