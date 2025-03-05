@@ -148,13 +148,53 @@ print(mensaje)
 # Pide al usuario que introduzca dos números y muestra un mensaje
 # indicando cuál es mayor o si son iguales
 
+numero1 = int(input("Introduce el primer número: "))
+numero2 = int(input("Introduce el segundo número: "))
+if numero1 > numero2:
+  print(f"{numero1} es mayor que {numero2}")
+elif numero2 > numero1:
+  print(f"{numero2} es mayor que {numero1}")
+else:
+  print(f"{numero1} y {numero2} son iguales")
+  
+  
 # Ejercicio 2: Calculadora simple
 # Pide al usuario dos números y una operación (+, -, *, /)
 # Realiza la operación y muestra el resultado (maneja la división entre zero)
 
+numero1 = float(input("Introduce el primer número: "))
+numero2 = float(input("Introduce el segundo número: "))
+
+operacion = input("Introduce la operación (+, -, *, /): ")
+if operacion == "+":
+  resultado = numero1 + numero2
+elif operacion == "-":
+  resultado = numero1 - numero2
+elif operacion == "*":
+  resultado = numero1 * numero2
+elif operacion == "/":
+  if numero2 == 0:
+    print("¡No se puede dividir entre cero!")
+    resultado = None
+  else:
+    resultado = numero1 / numero2
+else:
+  print("Operación no válida")
+
+if 'resultado' in locals():
+  print(f"El resultado es: {resultado}")
+
+
 # Ejercicio 3: Año bisiesto
 # Pide al usuario que introduzca un año y determina si es bisiesto.
 # Un año es bisiesto si es divisible por 4, excepto si es divisible por 100 pero no por 400.
+
+year = int(input("Introduce un año: "))
+if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:
+  print(f"{year} es un año bisiesto.")
+else:
+  print(f"{year} no es un año bisiesto.")
+
 
 # Ejercicio 4: Categorizar edades
 # Pide al usuario que introduzca una edad y la clasifique en:
@@ -163,3 +203,15 @@ print(mensaje)
 # - Adolescente (13-17 años)
 # - Adulto (18-64 años)
 # - Adulto mayor (65 años o más)
+
+edad = int(input("Introduce tu edad: "))
+if edad >= 65:
+  print("Eres un adulto mayor")
+elif edad >= 18:
+  print("Eres un adulto")
+elif edad >= 13:
+  print("Eres un adolescente")
+elif edad >= 3:
+  print("Eres un niño")
+else:
+  print("Eres un bebé")
