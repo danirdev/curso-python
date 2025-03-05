@@ -79,3 +79,5 @@ resultado = int(round(3.14159) / 2)
 print("Valor de PI (aproximado):", 3.14159)
 print("PI redondeado:", round(3.14159))
 print("División entera entre PI y 2:", resultado)
+
+print("--------------")
